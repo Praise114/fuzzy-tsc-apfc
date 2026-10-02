@@ -1,0 +1,47 @@
+==================================================================
+ APFC HARMONIC METRICS  |  Load 50%  |  C3_5-7-11-13  (characteristic set, tapered (source THD_V 7.35%))
+ Injected orders : [2 3 5 7 11 13]
+ Injected ratios : [0 0 0.05 0.04 0.03 0.02]   (V_h / V_1)
+==================================================================
+ Bank state (settled)     S  = [1 1 1]
+ Reactive error (settled) eQ =  +13.3406 kVAR
+------------------------------------------------------------------
+ STEADY-STATE CHECK (last 15 s)
+   bank state         : CHANGING  (3 distinct states in window):
+                          [0 1 1]
+                          [1 0 1]
+                          [1 1 1]
+   PF envelope        : [0.0091, 1.0000]   (p-p 0.9909)
+   eQ envelope [kVAR] : [-46.6124, +24.1673]  (p-p 70.7796)
+   VERDICT            : *** HUNTING / NOT SETTLED -- values below are a SNAPSHOT ***
+------------------------------------------------------------------
+                                  UNCOMP        COMP
+ Displacement PF (DPF)           0.5851      0.7688
+ True PF  P/(Vrms*Irms)          0.5783      0.5534
+ DPF/sqrt(1+THDi^2) [check]      0.5794      0.5493
+ Fundamental residual Q [VAR]   22848.8    -14314.1
+------------------------------------------------------------------
+ Distortion (compensated window)
+   THD_V =   7.3456 %    (native thd() =   7.3474 %)
+   THD_I =  97.9080 %    (native thd() =  97.9048 %)
+   TDD_I =  54.0612 %    (I_L = 56.4 A)
+------------------------------------------------------------------
+ Measured-Q accuracy (FLC input vs true fundamental residual Q)
+   Q measured (FLC dq)   =     16861.5 VAR
+   Q true (fundamental)  =    -14314.1 VAR
+   measurement error     =     31175.6 VAR   (217.80 %)
+------------------------------------------------------------------
+ Per-order (compensated)   order    V_h/V_1 [%]    I_h [A rms]
+                              2        0.0000        0.0015
+                              3        0.0002        0.0137
+                              5        4.9968       28.5780
+                              7        4.0008        9.6856
+                             11        2.9927        3.8379
+                             13        2.0065        2.1051
+------------------------------------------------------------------
+ Cross-checks
+   P_total (waveform) =    17380.03 W   vs P_sim(end) =    14048.51 W
+   DPF (script)       =    0.7688       vs PFdisp     =    0.6401
+   V1_peak (phase)    =  338.8119 V     (expect ~338.85 = phase-neutral)
+   I1_peak (phase)    =   44.0415 A
+==================================================================

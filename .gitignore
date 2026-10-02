@@ -1,0 +1,13 @@
+# MATLAB and Simulink generated files
+slprj/
+*.slxc
+*.asv
+*.autosave
+*.mexw64
+
+# Raw campaign output (about 190 MB per file)
+out_*.mat
+APFC_CampaignSummary_*.mat
+
+# Generated figures
+08 - Figures/

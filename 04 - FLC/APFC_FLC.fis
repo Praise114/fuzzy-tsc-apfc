@@ -1,0 +1,39 @@
+[System]
+Name='APFC_FLC'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='eQ'
+Range=[-40 40]
+NumMFs=5
+MF1='NB':'trapmf',[-40 -40 -20 -10]
+MF2='NS':'trimf',[-20 -10 0]
+MF3='ZE':'trimf',[-10 0 10]
+MF4='PS':'trimf',[0 10 20]
+MF5='PB':'trapmf',[10 20 40 40]
+
+[Output1]
+Name='dQc'
+Range=[-20 20]
+NumMFs=5
+MF1='NB':'trapmf',[-20 -20 -10 -5]
+MF2='NS':'trimf',[-10 -5 0]
+MF3='ZE':'trimf',[-5 0 5]
+MF4='PS':'trimf',[0 5 10]
+MF5='PB':'trapmf',[5 10 20 20]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
+5, 5 (1) : 1
