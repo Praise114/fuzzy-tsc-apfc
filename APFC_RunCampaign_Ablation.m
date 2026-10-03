@@ -50,7 +50,7 @@ switch VERSION
         model  = 'APFC_FullModel_v21b_Qmeas';
         subdir = 'v21b_ALPF_Qmeas';
     otherwise
-        error('Set VERSION to ''v22'' or ''v23''.');
+        error('Set VERSION to ''v21b'', ''v22'', or ''v23''.');
 end
 
 %% ---- prerequisite guard --------------------------------------------------
@@ -67,7 +67,7 @@ if ~isempty(here)
     modelsDir = fileparts(here);
 else
     pp = which('APFC_Parameters.m');
-    assert(~isempty(pp), 'Set the Current Folder to Models\\ or run APFC_Parameters.m first.');
+    assert(~isempty(pp), 'Set the Current Folder to the repository root or run APFC_Parameters.m first.');
     modelsDir = fileparts(pp);
 end
 addpath(modelsDir);
@@ -115,10 +115,10 @@ cells = { ...
 if validation_only
     cells = { 'C1', 100 };
     fprintf(['\n** VALIDATION PASS (%s): running C1@100 only. Compare the new\n' ...
-             '   Results_L100_C1_none.txt to your preserved v21 clean-grid file.\n' ...
-             '   The shared metrics (S, DPF, THD, true PF) should match closely;\n' ...
-             '   the ALPF does nothing on a clean grid. If they match, set\n' ...
-             '   validation_only = false and re-run for the full sweep. **\n'], VERSION);
+             '   Results_L100_C1_none.txt with the published copy from the\n' ...
+             '   repository. Keep a copy of the published file first, because\n' ...
+             '   this run overwrites it. If they match, set validation_only =\n' ...
+             '   false and re-run for the full sweep. **\n'], VERSION);
 end
 
 %% ---- profiler-disable capability (queried once, safely) ------------------
@@ -189,4 +189,4 @@ end
 clear cleanupCD
 fprintf('\n=== [%s] campaign pass complete. Files in %s ===\n', VERSION, resultsDir);
 fprintf('Re-run this script (same VERSION) any time to resume unfinished cells.\n');
-fprintf('When v22 is done, set VERSION = ''v23'' at the top and repeat.\n');
+fprintf('To run another configuration, set VERSION at the top and repeat.\n');

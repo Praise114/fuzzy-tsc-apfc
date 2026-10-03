@@ -93,7 +93,7 @@ fprintf('==============================================================\n');
 
 root = local_findFolder('07 - Results');
 if isempty(root)
-    error('Could not locate ''07 - Results''. Place this script in Models\\.');
+    error('Could not locate ''07 - Results''. Place this script in the repository root folder.');
 end
 outDir = fullfile(fileparts(root), '08 - Figures');
 if ~isfolder(outDir); mkdir(outDir); end

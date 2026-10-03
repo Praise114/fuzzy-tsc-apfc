@@ -145,6 +145,6 @@ for f = sel
 end
 
 fprintf('%s\n', repmat('=', 1, 74));
-fprintf('Done. Copy everything printed above and paste it into the conversation.\n');
+fprintf('Done.\n');
 
 end

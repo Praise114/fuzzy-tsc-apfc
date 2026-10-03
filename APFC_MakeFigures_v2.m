@@ -122,7 +122,7 @@ fprintf('==============================================================\n');
 % =====================================================================
 resultsRoot = local_findFolder('07 - Results');
 if isempty(resultsRoot)
-    error('Could not locate ''07 - Results''. Place this script in Models\\.');
+    error('Could not locate ''07 - Results''. Place this script in the repository root folder.');
 end
 figRoot = fullfile(fileparts(resultsRoot), '08 - Figures');
 if ~isfolder(figRoot); mkdir(figRoot); end

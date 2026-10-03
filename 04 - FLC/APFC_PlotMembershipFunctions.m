@@ -168,7 +168,7 @@ end
 
 
 % =====================================================================
-% Figure plumbing, identical in spirit to APFC_MakeFigures
+% Figure plumbing, identical in spirit to APFC_MakeFigures_v2
 % =====================================================================
 function f = local_newFig(cfg)
 f = figure('Units','centimeters', ...

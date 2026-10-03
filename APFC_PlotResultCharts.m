@@ -10,7 +10,7 @@ function APFC_PlotResultCharts()
 %         Displacement against true power factor at half load across the
 %         five harmonic conditions.
 %
-%   Both are drawn in the same house style as APFC_MakeFigures: white
+%   Both are drawn in the same house style as APFC_MakeFigures_v2: white
 %   canvas immune to the MATLAB dark theme, Times New Roman, type sized
 %   for a 14 cm placement in the report.
 %
